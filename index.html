@@ -11,7 +11,32 @@
 </head>
 
 <body>
-    
+    <div class="site flex items-center justify-center">
+        <div class="home-container flex">
+            <div class="home-buttons flex gap-big">
+                <a href="#" class="pointer b-r-small p-button b-blue" data-guess-mode="Guess country">Guess country</a>
+                <a href="#" class="pointer b-r-small p-button b-blue" data-guess-mode="Guess capital">Guess capital</a>
+            </div>
+        </div>
+        <div class="guess-container hidden flex direction-col gap-big">
+            <div class="country-img-wrapper">
+                <img src="" class="country-img" alt="Country flag">
+            </div>
+            <form class="guess-form flex direction-col gap-small">
+                <div class="fields flex gap-small relative">
+                    <input type="text" name="guess" id="guess" class="guess-input" list="sujections-list"
+                        placeholder="">
+                    <label for="guess" class="guess-label absolute">Guess country</label>
+                    <datalist id="sujections-list"></datalist>
+                    <input type="submit" value="Guess" id="guess-btn" class="guess-btn p-button b-r-small b-blue">
+                </div>
+            </form>
+            <div class="buttons flex gap-small justify-center">
+                <a href="#" class="show-answer-btn pointer b-r-small p-button b-blue">Show answer</a>
+                <a href="#" class="next-btn pointer b-r-small p-button b-blue">Next</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

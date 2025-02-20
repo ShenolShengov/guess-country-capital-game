@@ -69,3 +69,145 @@ option {
 .direction-col {
     flex-direction: column;
 }
+
+.gap-small {
+    gap: 0.8em;
+}
+
+.gap-big {
+    gap: 2.5em;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.site {
+    background-color: var(--champagne);
+    min-height: 100dvh;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.b-r-small {
+    border-radius: 0.3em;
+}
+
+.p-button {
+    padding: 0.5em 1.5em;
+}
+
+a {
+    transition: all 0.1s ease-in;
+
+    &:hover {
+        background-color: var(--saffron);
+    }
+}
+
+.guess-container {
+    flex-basis: 25em;
+
+    .guess-input {
+        flex: 1;
+        border: 0px solid black;
+        border-bottom-width: 1px;
+        background-color: inherit;
+        padding: 0.5em 0.5em;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+            transform: translateY(-170%);
+            font-size: 0.9em;
+        }
+    }
+
+    .guess-label {
+        bottom: 0.5em;
+        transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .guess-btn {
+        border: none;
+
+        &:hover {
+            background-color: var(--saffron);
+        }
+    }
+}
+
+.error {
+    p {
+        color: var(--burnt-sienna);
+        font-weight: 600;
+    }
+
+    .reload-btn {
+        background-color: var(--burnt-sienna);
+        width: fit-content;
+    }
+}
+
+.answer-dialog {
+    &[open] {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3em;
+        text-align: center;
+        background: var(--champagne);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border: none;
+        position: relative;
+    }
+
+    .answer-message {
+        font-size: 1.5em;
+    }
+
+    .answer {
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    .close {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background: inherit;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }  
+    }
+
+    &:not([open]) {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
