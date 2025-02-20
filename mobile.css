@@ -1,0 +1,5 @@
+@media (max-width: 610px) {
+    .home-buttons {
+        flex-direction: column;
+    }
+  }
