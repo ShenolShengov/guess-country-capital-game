@@ -76,6 +76,10 @@ option {
     gap: 0.8em;
 }
 
+.gap-medium {
+    gap: 1.5em;
+}
+
 .gap-big {
     gap: 2.5em;
 }
